@@ -1,0 +1,61 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+	package
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:1-18:12
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:9:5-11:34
+	android:required
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:11:9-32
+	android:name
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:10:9-60
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:13:5-15:34
+	android:required
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:15:9-32
+	android:name
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml:14:9-60
+uses-sdk
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+		ADDED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml
+		INJECTED from D:\git_serach_android\satish-git-sdk\src\main\AndroidManifest.xml

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SatishGitSeach.iml" filepath="$PROJECT_DIR$/.idea/modules/SatishGitSeach.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SatishGitSeach.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SatishGitSeach.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/satish-git-sdk/SatishGitSeach.satish-git-sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/satish-git-sdk/SatishGitSeach.satish-git-sdk.iml" />
+    </modules>
+  </component>
+</project>

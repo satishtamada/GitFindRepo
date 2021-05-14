@@ -1,0 +1,3 @@
+include ':satish-git-sdk'
+include ':app'
+rootProject.name = "SatishGitSeach"

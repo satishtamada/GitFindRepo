@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Find Git Repo</string>
+    <string name="no_data_found">No Data found..!</string>
+</resources>
