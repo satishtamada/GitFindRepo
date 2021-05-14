@@ -14,7 +14,7 @@ interface RepoDataDao {
     fun getRepoList(): LiveData<List<Item>>?
 
     @Query("SELECT * FROM repo WHERE id = :id")
-    fun getRepoById(id: Int): LiveData<Item>?
+    fun getRepoById(id: Int): Item
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertRepo(chatDataEntity: Item)

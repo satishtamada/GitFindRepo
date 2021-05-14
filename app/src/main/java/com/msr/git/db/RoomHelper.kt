@@ -4,18 +4,20 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.msr.git.db.dao.RepoDataDao
+import com.msr.satish_git_sdk.network.model.Converters
 import com.msr.satish_git_sdk.network.model.Item
 
 
 @Database(entities = [Item::class], version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class RoomHelper : RoomDatabase() {
     abstract fun repoDataDao(): RepoDataDao
 
     companion object {
         @Volatile
         private var instance: RoomHelper? = null
-
         fun getInstance(context: Context): RoomHelper? {
             if (instance == null) {
                 instance = Room.databaseBuilder(context, RoomHelper::class.java, "mainDb")

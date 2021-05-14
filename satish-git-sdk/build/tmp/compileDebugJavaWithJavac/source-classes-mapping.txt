@@ -66,7 +66,5 @@ hilt_aggregated_deps/com_msr_satish_git_sdk_GitApplication_GeneratedInjectorModu
  hilt_aggregated_deps.com_msr_satish_git_sdk_GitApplication_GeneratedInjectorModuleDeps
 com/msr/satish_git_sdk/BuildConfig.java
  com.msr.satish_git_sdk.BuildConfig
-com/msr/satish_git_sdk/network/model/Owner.java
- com.msr.satish_git_sdk.network.model.Owner
 com/msr/satish_git_sdk/repo/SearchRepository_Factory.java
  com.msr.satish_git_sdk.repo.SearchRepository_Factory

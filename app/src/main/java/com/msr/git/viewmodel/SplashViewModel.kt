@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.msr.git.db.GitItemDBRepo
 import com.msr.git.di.IoDispatcher
+import com.msr.satish_git_sdk.network.model.Item
 import com.msr.satish_git_sdk.network.model.SerachReponse
 import com.msr.satish_git_sdk.repo.SearchRepository
 import com.msr.satish_git_sdk.secure.BineSharedPreference
@@ -27,13 +28,13 @@ class SplashViewModel @ViewModelInject constructor(
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher
 ) : ViewModel() {
     private val _actionResult = SingleLiveEvent<Result<SerachReponse?>>()
-    private val _isHubConnected = MutableLiveData<Boolean>()
+    private val _itemInfo = MutableLiveData<Item>()
 
     val actionResult: LiveData<Result<SerachReponse?>>
         get() = _actionResult
 
-    val isHubConnected: LiveData<Boolean>
-        get() = _isHubConnected
+    val actionItemInfo: LiveData<Item>
+        get() = _itemInfo
 
     fun getAppInfo(query: String) {
         viewModelScope.launch(ioDispatcher) {
@@ -63,6 +64,15 @@ class SplashViewModel @ViewModelInject constructor(
                 for(model in it.items){
                     GitItemDBRepo.insertGitRepo(context,model)
                 }
+            }
+        }
+    }
+
+    fun getInfo(id: Int) {
+        viewModelScope.launch(ioDispatcher) {
+            val item=GitItemDBRepo.getRepoInfo(context,id)
+            item?.let {
+                _itemInfo.postValue(it)
             }
         }
     }

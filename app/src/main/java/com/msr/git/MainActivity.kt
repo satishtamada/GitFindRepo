@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity(), RepoAdapter.OnRepoClickListener {
         binding.recyclerView.adapter = adapter
 
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+                androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String): Boolean {
-                binding.progresBar.visibility=View.VISIBLE
+                binding.progresBar.visibility = View.VISIBLE
                 viewModel.getAppInfo(p0)
                 return false
             }
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), RepoAdapter.OnRepoClickListener {
         })
 
         viewModel.actionResult.observe(this, Observer { result ->
-            binding.progresBar.visibility=View.GONE
+            binding.progresBar.visibility = View.GONE
             run {
                 Log.e("here", "$result")
                 result.responseData?.let {
@@ -66,6 +66,6 @@ class MainActivity : AppCompatActivity(), RepoAdapter.OnRepoClickListener {
     }
 
     override fun onRepoClicked(model: Item) {
-       startActivity(Intent(this,RepoDetailActivity::class.java))
+        startActivity(Intent(this, RepoDetailActivity::class.java).putExtra("id", model.id))
     }
 }

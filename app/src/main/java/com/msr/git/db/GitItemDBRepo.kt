@@ -22,9 +22,14 @@ class GitItemDBRepo {
             }
         }
 
-        fun getSelectedCheckBox(context: Context): LiveData<List<Item>>? {
+        fun getListOfRepo(context: Context): LiveData<List<Item>>? {
             roomHelper = intialiseDB(context)
             return roomHelper?.repoDataDao()?.getRepoList()
+        }
+
+        fun getRepoInfo(context: Context,id:Int): Item? {
+            roomHelper = intialiseDB(context)
+            return roomHelper?.repoDataDao()?.getRepoById(id)
         }
 
     }
