@@ -68,3 +68,5 @@ com/msr/satish_git_sdk/BuildConfig.java
  com.msr.satish_git_sdk.BuildConfig
 com/msr/satish_git_sdk/repo/SearchRepository_Factory.java
  com.msr.satish_git_sdk.repo.SearchRepository_Factory
+com/msr/satish_git_sdk/network/model/ResponseData.java
+ com.msr.satish_git_sdk.network.model.ResponseData

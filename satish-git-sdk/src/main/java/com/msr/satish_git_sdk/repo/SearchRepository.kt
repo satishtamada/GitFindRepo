@@ -8,9 +8,9 @@ import javax.inject.Inject
 class SearchRepository @Inject constructor(
     private val api: ApiService,
 ) : BaseRepository() {
-    suspend fun getInfo(query: String): Result<SerachReponse?> {
+    suspend fun getInfo(query: String,page:Int): Result<SerachReponse?> {
         val inputQuery = "$query in:name"
-        val result = getResult { api.getInfo(inputQuery, 10, 1) }
+        val result = getResult { api.getInfo(inputQuery, 10, page) }
         return result
     }
 }

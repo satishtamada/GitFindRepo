@@ -22,9 +22,9 @@ class GitItemDBRepo {
             }
         }
 
-        fun getListOfRepo(context: Context): LiveData<List<Item>>? {
+        fun getListOfRepo(context: Context,query:String): List<Item>? {
             roomHelper = intialiseDB(context)
-            return roomHelper?.repoDataDao()?.getRepoList()
+            return roomHelper?.repoDataDao()?.getRepoList(query)
         }
 
         fun getRepoInfo(context: Context,id:Int): Item? {
