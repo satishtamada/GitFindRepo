@@ -3,6 +3,7 @@ package com.msr.git
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -30,7 +31,7 @@ class RepoDetailActivity : AppCompatActivity() {
         id = intent.getIntExtra("id", 0)
         viewModel.getInfo(id)
         viewModel.actionItemInfo.observe(this, Observer {
-            this.item=it
+            this.item = it
             binding.name.text = it.name
             binding.desc.text = it.description
             binding.link.text = "Clone Repo: ${it.cloneUrl}"
@@ -44,4 +45,16 @@ class RepoDetailActivity : AppCompatActivity() {
             }
         }
     }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 }

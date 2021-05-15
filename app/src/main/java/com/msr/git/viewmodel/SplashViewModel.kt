@@ -1,7 +1,9 @@
 package com.msr.git.viewmodel
 
 import android.content.Context
+import android.net.ConnectivityManager
 import android.util.Log
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -22,6 +24,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
+
 class SplashViewModel @ViewModelInject constructor(
         private val repository: SearchRepository,
         private val sharedPreference: BineSharedPreference,
@@ -38,6 +41,7 @@ class SplashViewModel @ViewModelInject constructor(
         get() = _itemInfo
 
     fun getAppInfo(query: String, page: Int) {
+        if(!isNetworkConnected())
         getRepos(query)
         viewModelScope.launch(ioDispatcher) {
             val call = async {
@@ -83,6 +87,7 @@ class SplashViewModel @ViewModelInject constructor(
     }
 
     fun getRepos(query: String) {
+        Log.e("here","offline")
         viewModelScope.launch(ioDispatcher) {
             val input="%$query%"
             val item = GitItemDBRepo.getListOfRepo(context, input)
@@ -95,5 +100,11 @@ class SplashViewModel @ViewModelInject constructor(
                 _actionResult.postValue(reponse)
             }
         }
+    }
+
+
+    private fun isNetworkConnected(): Boolean {
+        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager?
+        return cm?.activeNetworkInfo != null && cm.activeNetworkInfo?.isConnected!!
     }
 }
